@@ -12,7 +12,7 @@
       <img
         src="https://play.tailwindcss.com/img/beams.jpg"
         alt=""
-        class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+        class="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2 z-0"
         width="1308"
       />
       <div
@@ -20,7 +20,7 @@
       ></div>
 
       <header
-        class="sticky flex justify-between py-4 border-b border-slate-900/10 px-4 mx-0"
+        class="fixed top-0 left-0 right-0 flex justify-between py-4 border-b border-slate-900/10 px-4 mx-0 z-[100] bg-white"
       >
         <a
           class="mr-3 flex-none w-[2.0625rem] overflow-hidden md:w-auto"
@@ -118,91 +118,202 @@
         </div>
       </header>
 
-      <main
-        class="relative h-svh mt-10 bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10"
-      >
-        <div class="mx-auto max-w-md">
-          <img
-            src="https://play.tailwindcss.com/img/logo.svg"
-            class="h-6"
-            alt="Tailwind Play"
-          />
-          <div class="divide-y divide-gray-300/50">
-            <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
-              <p>
-                An advanced online playground for Tailwind CSS, including
-                support for things like:
-              </p>
-              <ul class="space-y-4">
-                <li class="flex items-center">
-                  <svg
-                    class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="11" />
-                    <path
-                      d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
-                      fill="none"
-                    />
-                  </svg>
-                  <p class="ml-4">
-                    Customizing your
-                    <code class="text-sm font-bold text-gray-900"
-                      >tailwind.config.js</code
+      <main class="z-10">
+        <section
+          id="hero-section"
+          class="flex mt-[90px] justify-center flex-wrap gap-y-8 gap-x-8"
+        >
+          <section
+            class="relative bg-white pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-0 md:max-w-lg sm:rounded-lg sm:px-4"
+          >
+            <div class="mx-4">
+              <img
+                src="https://play.tailwindcss.com/img/logo.svg"
+                class="h-6"
+                alt="Tailwind Play"
+              />
+              <div class="divide-y divide-gray-300/50">
+                <div class="space-y-6 py-8 text-base leading-7 text-gray-600">
+                  <p>
+                    An advanced online playground for Tailwind CSS, including
+                    support for things like:
+                  </p>
+                  <ul class="space-y-4">
+                    <li class="flex items-center">
+                      <svg
+                        class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="11" />
+                        <path
+                          d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                          fill="none"
+                        />
+                      </svg>
+                      <p class="ml-4">
+                        Customizing your
+                        <code class="text-sm font-bold text-gray-900"
+                          >tailwind.config.js</code
+                        >
+                        file
+                      </p>
+                    </li>
+                    <li class="flex items-center">
+                      <svg
+                        class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="11" />
+                        <path
+                          d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                          fill="none"
+                        />
+                      </svg>
+                      <p class="ml-4">
+                        Extracting classes with
+                        <code class="text-sm font-bold text-gray-900"
+                          >@apply</code
+                        >
+                      </p>
+                    </li>
+                    <li class="flex items-center">
+                      <svg
+                        class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="11" />
+                        <path
+                          d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
+                          fill="none"
+                        />
+                      </svg>
+                      <p class="ml-4">Code completion with instant preview</p>
+                    </li>
+                  </ul>
+                  <p>
+                    Perfect for learning how the framework works, prototyping a
+                    new idea, or creating a demo to share online.
+                  </p>
+                </div>
+                <div class="pt-8 text-base font-semibold leading-7">
+                  <p class="text-gray-900">Want to dig deeper into Tailwind?</p>
+                  <p>
+                    <a
+                      href="https://tailwindcss.com/docs"
+                      class="text-sky-500 hover:text-sky-600"
+                      >Read the docs &rarr;</a
                     >
-                    file
                   </p>
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="11" />
-                    <path
-                      d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
-                      fill="none"
-                    />
-                  </svg>
-                  <p class="ml-4">
-                    Extracting classes with
-                    <code class="text-sm font-bold text-gray-900">@apply</code>
-                  </p>
-                </li>
-                <li class="flex items-center">
-                  <svg
-                    class="h-6 w-6 flex-none fill-sky-100 stroke-sky-500 stroke-2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="11" />
-                    <path
-                      d="m8 13 2.165 2.165a1 1 0 0 0 1.521-.126L16 9"
-                      fill="none"
-                    />
-                  </svg>
-                  <p class="ml-4">Code completion with instant preview</p>
-                </li>
-              </ul>
-              <p>
-                Perfect for learning how the framework works, prototyping a new
-                idea, or creating a demo to share online.
-              </p>
+                </div>
+              </div>
             </div>
-            <div class="pt-8 text-base font-semibold leading-7">
-              <p class="text-gray-900">Want to dig deeper into Tailwind?</p>
-              <p>
-                <a
-                  href="https://tailwindcss.com/docs"
-                  class="text-sky-500 hover:text-sky-600"
-                  >Read the docs &rarr;</a
-                >
-              </p>
+          </section>
+
+          <section
+            class="relative bg-white pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-0 md:max-w-lg sm:rounded-lg sm:px-4"
+          >
+            <div class="mx-0">
+              <img
+                src="https://i.postimg.cc/HxHyt53c/undraw-heatmap-uyye.png"
+                class="w-full"
+              />
+            </div>
+          </section>
+        </section>
+
+        <section id="gallery-section">
+          <div
+            class="flex flex-wrap mt-[90px] mb-[90px] max-w-screen-lg mx-auto"
+          >
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg"
+                alt=""
+              />
+            </div>
+            <div class="w-full md:w-1/2 lg:w-4/12">
+              <img
+                class="h-auto max-w-full rounded-lg"
+                src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg"
+                alt=""
+              />
             </div>
           </div>
-        </div>
+        </section>
       </main>
     </div>
   </body>
