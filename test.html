@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chrome & Burger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css">
+    <style>
+      .font-lobster {
+        font-family: 'Lobster', cursive; 
+      }
+    </style>
+  </head>
+  <body class="font-sans text-[20px]">
+    <header class="pt-2.5 pb-2.5 flex items-center justify-between max-w-[1440px] mx-auto border-b">
+      <a href="#" class="flex items-center font-semibold text-black">
+        <div class="flex items-center justify-center text-[32px] h-16 w-16">🍔</div> 
+        <div class="flex-1 font-lobster">Chrome & Burger</div>
+      </a>
+      <nav class="flex justify-center w-full lg:w-auto lg:flex">
+        <!-- เมนูที่จะแสดงในหน้าจอใหญ่ -->
+        <ul id="menu" class="hidden lg:flex">
+          <li><a href="#" class="px-4 font-semibold text-black">Home</a></li>
+          <li><a href="#menu-burgers" class="px-4 font-semibold text-black">Menu</a></li>
+          <li><a href="#menu-burgers" class="px-4 bg-blue-500 text-white rounded-lg">Order Now</a></li>
+        </ul>
+        <!-- ปุ่ม toggle สำหรับเปิดเมนูในหน้าจอมือถือ -->
+        <button id="mobile-toggle" class="block lg:hidden" onclick="toggleMobileMenu();">
+          <img src="./images/mobileToggle.svg" alt="Open Menu" />
+        </button>
+      </nav>
+    </header>
+
+    <!-- เมนูที่จะถูกแสดงในหน้าจอเล็ก -->
+    <nav id="mobile-menu" class="hidden lg:hidden">
+      <ul>
+        <li><a href="#" class="block px-4 py-2 font-semibold text-black">Home</a></li>
+        <li><a href="#menu-burgers" class="block px-4 py-2 font-semibold text-black">Menu</a></li>
+        <li><a href="#menu-burgers" class="block px-4 py-2 bg-blue-500 text-white rounded-lg">Order Now</a></li>
+      </ul>
+    </nav>
+
+    <script>
+      function toggleMobileMenu() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+      }
+    </script>
+  </body>
+</html>
